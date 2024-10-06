@@ -1,10 +1,20 @@
 import {Stack} from "expo-router";
+import {createTamagui, TamaguiProvider, View} from 'tamagui'
+import defaultConfig from '@tamagui/config/v3'
+
 
 export default function RootLayout() {
+    const config = createTamagui(defaultConfig)
     return (
-        <Stack>
-            <Stack.Screen name="index" options={{title: 'Home'}}/>
-            <Stack.Screen name="about" options={{title: 'About'}}/>
-        </Stack>
+        <TamaguiProvider config={config}>
+            <Stack>
+                <Stack.Screen name="(tabs)" options={{headerShown: false}}/>
+                <Stack.Screen name="+not-found"/>
+            </Stack>
+        </TamaguiProvider>
+
     );
 }
+
+
+
