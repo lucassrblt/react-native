@@ -1,5 +1,6 @@
 import { Text, View } from "react-native";
 import {StyleSheet} from "react-native";
+import { Link} from "expo-router";
 
 export default function Index() {
 
@@ -12,6 +13,11 @@ export default function Index() {
         },
         text : {
             color: "#fff",
+        },
+        link : {
+            fontSize: 20,
+            textDecorationLine: 'underline',
+            color: '#fff'
         }
     })
 
@@ -20,6 +26,7 @@ export default function Index() {
       style={style.container}
     >
       <Text style={style.text}>Home Screen</Text>
+        <Link href="/about" style={style.link}>About</Link>
     </View>
   );
 }
