@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 export default function ProduitsScreen() {
     return (
         <View>
-            <Text>Produits screen</Text>
+            <Text>Produitssdqd screen</Text>
         </View>
     )
 }
